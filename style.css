@@ -1,0 +1,269 @@
+body {
+    margin: 0;
+    font-family: 'Georgia', serif;
+    background-color: #0c0c0c;
+    color: #f8f5f2;
+}
+
+/* HERO SECTION */
+.hero {
+    height: 100vh;
+    background: url("https://images.unsplash.com/photo-1618220179428-22790b461013?auto=format&fit=crop&w=1400&q=80") no-repeat center center/cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    text-align: center;
+}
+
+.overlay {
+    background: rgba(60, 0, 20, 0.65);
+    padding: 60px;
+    border-radius: 15px;
+}
+
+.hero h1 {
+    font-size: 55px;
+    letter-spacing: 3px;
+    margin-bottom: 15px;
+    color: gold;
+}
+
+.hero p {
+    font-size: 20px;
+    color: #f1d4af;
+    margin-bottom: 25px;
+}
+
+/* BUTTON */
+.btn {
+    display: inline-block;
+    padding: 12px 28px;
+    background: gold;
+    color: black;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 30px;
+    transition: 0.3s;
+}
+
+.btn:hover {
+    background: #800020;
+    color: white;
+}
+
+/* PRODUITS */
+#produits {
+    padding: 80px 20px;
+    text-align: center;
+}
+
+#produits h2 {
+    color: gold;
+    margin-bottom: 50px;
+    font-size: 30px;
+}
+
+.produit {
+    display: inline-block;
+    width: 280px;
+    margin: 20px;
+    padding: 20px;
+    background: #1a1a1a;
+    border-radius: 20px;
+    transition: 0.3s;
+}
+
+.produit:hover {
+    transform: translateY(-8px);
+    background: #2a0a1a;
+}
+
+.produit img {
+    width: 100%;
+    border-radius: 15px;
+}
+
+.produit h3 {
+    color: #f1d4af;
+}
+
+footer {
+    text-align: center;
+    padding: 30px;
+    border-top: 1px solid gold;
+    color: #aaa;
+}
+
+/* NAVIGATION */
+nav {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.9);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 20px;
+    /* réduit l'espace */
+    z-index: 1000;
+    box-sizing: border-box;
+}
+
+.logo {
+    color: gold;
+    font-size: 22px;
+    font-weight: bold;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 15px;
+    /* réduit l'espace entre les liens */
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #f1d4af;
+    transition: 0.3s;
+}
+
+nav ul li a:hover {
+    color: gold;
+}
+
+/* ESPACE POUR LA NAV FIXE */
+body {
+    padding-top: 80px;
+}
+
+/* SECTION A PROPOS */
+#apropos {
+    padding: 80px 20px;
+    text-align: center;
+    background: #140510;
+}
+
+#apropos h2 {
+    color: gold;
+    margin-bottom: 30px;
+}
+
+#apropos p {
+    max-width: 700px;
+    margin: auto;
+    margin-bottom: 20px;
+    color: #f1d4af;
+    line-height: 1.6;
+}
+
+#contact {
+    padding: 100px 20px;
+    text-align: center;
+    background: #12040c;
+}
+
+#contact h2 {
+    color: gold;
+    margin-bottom: 40px;
+}
+
+/* .contact-container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    max-width: 500px;
+    margin: auto;
+    margin-bottom: 40px;
+} */
+.contact-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    max-width: 1000px;
+    margin: auto;
+    margin-bottom: 50px;
+    text-align: left;
+}
+
+.contact-container p {
+    color: #f1d4af;
+    font-size: 18px;
+}
+
+.contact-container a {
+    color: gold;
+    text-decoration: none;
+}
+
+.contact-container a:hover {
+    color: #ffffff;
+}
+
+#contact h2 {
+    color: gold;
+    margin-bottom: 30px;
+}
+
+#contact p {
+    color: #f1d4af;
+    margin-bottom: 10px;
+}
+
+.contact-container p {
+    background: #1a0a14;
+    padding: 20px;
+    border-radius: 15px;
+    color: #f1d4af;
+    transition: 0.3s;
+}
+
+.contact-container p:hover {
+    background: #2a0f20;
+    transform: translateY(-5px);
+}
+
+.contact-item {
+    background: #1a0a14;
+    padding: 25px;
+    border-radius: 15px;
+    transition: 0.3s;
+    text-align: center;
+}
+
+.contact-item:hover {
+    background: #2a0f20;
+    transform: translateY(-5px);
+}
+
+.contact-item h3 {
+    color: gold;
+    margin-bottom: 10px;
+    font-size: 18px;
+}
+
+.contact-item p,
+.contact-item a {
+    color: #f1d4af;
+    text-decoration: none;
+    font-size: 16px;
+    display: block;
+}
+
+.contact-item a:hover {
+    color: white;
+}
+
+
+html {
+    scroll-behavior: smooth;
+}
+
+@media (max-width: 768px) {
+    .contact-container {
+        grid-template-columns: 1fr;
+    }
+}
