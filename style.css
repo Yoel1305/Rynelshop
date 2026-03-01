@@ -8,7 +8,7 @@ body {
 /* HERO SECTION */
 .hero {
     height: 100vh;
-    background: url("https://images.unsplash.com/photo-1618220179428-22790b461013?auto=format&fit=crop&w=1400&q=80") no-repeat center center/cover;
+    background: url("images/hero.jpg") no-repeat center center/cover;
     display: flex;
     justify-content: center;
     align-items: center;
