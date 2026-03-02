@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Collection Bazin - Rynel'Shop</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- NAVIGATION -->
+    <nav>
+        <ul>
+            <li><a href="index.html">Accueil</a></li>
+            <li><a href="wax.html">Wax</a></li>
+            <li><a href="bazin.html" class="active">Bazin</a></li>
+            <li><a href="#" onclick="togglePanier()">Panier (<span id="compteur">0</span>) 🛒</a></li>
+        </ul>
+    </nav>
+
+    <h1>Collection Bazin</h1>
+
+    <div class="products-container">
+        <!-- Produit 1 -->
+        <div class="product" data-id="bazin1" data-price="8000">
+            <img src="images/bazin1.jpg" alt="Bazin Blanc">
+            <h3 class="product-name">Bazin Blanc Luxe</h3>
+            <div class="quantity">
+                <button class="minus">-</button>
+                <span class="number">0</span>
+                <button class="plus">+</button>
+            </div>
+            <button class="add-to-cart">Ajouter au panier</button>
+        </div>
+
+        <!-- Produit 2 -->
+        <div class="product" data-id="bazin2" data-price="9000">
+            <img src="images/bazin2.jpg" alt="Bazin Noir">
+            <h3 class="product-name">Bazin Noir Élite</h3>
+            <div class="quantity">
+                <button class="minus">-</button>
+                <span class="number">0</span>
+                <button class="plus">+</button>
+            </div>
+            <button class="add-to-cart">Ajouter au panier</button>
+        </div>
+
+        <!-- Produit 3 -->
+        <div class="product" data-id="bazin3" data-price="9500">
+            <img src="images/bazin3.jpg" alt="Bazin Bleu">
+            <h3 class="product-name">Bazin Bleu Royal</h3>
+            <div class="quantity">
+                <button class="minus">-</button>
+                <span class="number">0</span>
+                <button class="plus">+</button>
+            </div>
+            <button class="add-to-cart">Ajouter au panier</button>
+        </div>
+    </div>
+
+    <a href="index.html">← Retour à l'accueil</a>
+
+    <!-- PANIER -->
+    <div id="panier">
+        <h3>Panier 🛒</h3>
+        <div id="liste-panier"></div>
+        <p id="total-general"></p>
+        <button onclick="viderPanier()" class="btn danger">Vider le panier</button>
+        <button onclick="envoyerWhatsApp()" class="btn">Commander via WhatsApp</button>
+        <button onclick="fermerPanier()" class="btn">Fermer</button>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

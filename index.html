@@ -3,126 +3,117 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>Boutique de Tissus Élégance</title>
-    <link rel="stylesheet" href="style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rynel'Shop</title>
+    <link rel="stylesheet" href="style-index.css">
+    <link rel="stylesheet" href="style.css"> <!-- pour le panier et produits -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- icône panier -->
 </head>
 
 <body>
+
+    <!-- NAVIGATION -->
     <nav>
-        <div class="logo">Rynel'Shop</div>
         <ul>
-            <li><a href="#">Accueil</a></li>
-            <li><a href="#produits">Collection</a></li>
-            <li><a href="#apropos">À propos</a></li>
+            <li><a href="#home">Accueil</a></li>
+            <li><a href="#about">À propos</a></li>
+            <li><a href="#produits">Produits</a></li>
             <li><a href="#contact">Contact</a></li>
+            <li>
+                <a href="#" onclick="togglePanier()">
+                    <i class="fas fa-shopping-cart"></i> Panier (<span id="compteur">0</span>)
+                </a>
+            </li>
         </ul>
     </nav>
-    <header class="hero">
-        <div class="overlay">
-            <h1>Rynel'Shop</h1>
-            <p>Élégance • Raffinement • Qualité</p>
-            <a href="#produits" class="btn">Découvrir la collection</a>
-        </div>
-    </header>
 
-    <!-- <header>
-        <h1>🧵 Boutique Élégance</h1>
-        <p>Tissus de qualité pour toutes vos occasions</p>
-    </header>
-
-    <section class="hero">
-        <h2>Nouvelle collection disponible</h2>
-        <a href="#produits" class="btn">Voir les tissus</a>
-    </section> -->
-
-    <section id="produits">
-        <h2>Nos Tissus</h2>
-
-        <div class="produit">
-            <img src="https://via.placeholder.com/250" alt="Tissu 1">
-            <h3>Wax Premium</h3>
-            <p>25€ le mètre</p>
-            <a href="https://wa.me/22893681082" class="btn">Commander</a>
-        </div>
-
-        <div class="produit">
-            <img src="https://via.placeholder.com/250" alt="Tissu 2">
-            <h3>Bazin Riche</h3>
-            <p>40€ le mètre</p>
-            <a href="https://wa.me/22893681082" class="btn">Commander</a>
-        </div>
-
+    <!-- HERO -->
+    <section id="home" class="hero">
+        <h1>Rynel'Shop</h1>
+        <p>L'élégance africaine réinventée</p>
     </section>
-    <section id="apropos">
+
+    <!-- À PROPOS -->
+    <section id="about">
         <h2>À propos de Rynel'Shop</h2>
-        <p>
-            Rynel'Shop est une boutique dédiée à la femme élégante et moderne.
-            Nous sélectionnons avec soin des tissus africains raffinés,
-            alliant tradition et luxe contemporain.
-        </p>
-        <p>
-            Chaque pièce raconte une histoire de beauté,
-            de culture et de féminité.
-        </p>
+        <div class="about-card">
+            <p>
+                Rynel'Shop vous propose des tissus Wax et Bazin de qualité supérieure, pour un style chic et raffiné.
+                Chaque pièce est choisie avec soin pour apporter élégance et sophistication à vos créations.
+            </p>
+        </div>
     </section>
 
+    <!-- PRODUITS -->
+    <section id="produits">
+        <h2>Nos Collections</h2>
+        <div class="collections">
+            <a href="wax.html" class="collection-card">
+                <img src="images/wax.jpg" alt="Collection Wax">
+                <div class="collection-overlay">WAX</div>
+            </a>
+            <a href="bazin.html" class="collection-card">
+                <img src="images/bazin.jpg" alt="Collection Bazin">
+                <div class="collection-overlay">BAZIN</div>
+            </a>
+        </div>
+    </section>
+
+
+    <!-- CONTACT -->
     <section id="contact">
         <h2>Contact</h2>
-
         <div class="contact-container">
-
             <div class="contact-item">
-                <h3>📍 Localisation</h3>
-                <p>Basée à Lomé (TOGO)</p>
+                <i class="fab fa-whatsapp contact-icon"></i>
+                <p>WhatsApp</p>
+                <p>+33 7 58 34 48 75</p>
             </div>
-
             <div class="contact-item">
-                <h3>📞 WhatsApp</h3>
-                <a href="https://wa.me/22893681082" target="_blank">
-                    +228 93 68 10 82
-                </a>
+                <i class="fab fa-instagram contact-icon"></i>
+                <p>Instagram</p>
+                <p>@RynelShop</p>
             </div>
-
             <div class="contact-item">
-                <h3>📧 Email</h3>
-                <p>contact@rynelshop.com</p>
+                <i class="fab fa-tiktok contact-icon"></i>
+                <p>TikTok</p>
+                <p>@RynelShop</p>
             </div>
-
             <div class="contact-item">
-                <h3>📸 Instagram</h3>
-                <a href="https://instagram.com/rynelshop" target="_blank">
-                    @rynelshop
-                </a>
+                <i class="fab fa-snapchat contact-icon"></i>
+                <p>Snapchat</p>
+                <p>@RynelShop</p>
             </div>
-
-            <div class="contact-item">
-                <h3>🎵 TikTok</h3>
-                <a href="https://tiktok.com/@rynelshop" target="_blank">
-                    @rynelshop
-                </a>
-            </div>
-
-            <div class="contact-item">
-                <h3>👻 Snapchat</h3>
-                <a href="https://snapchat.com/add/rynelshop" target="_blank">
-                    rynelshop
-                </a>
-            </div>
-
         </div>
-
-        <a href="https://wa.me/22893681082" class="btn" target="_blank">
-            Commander sur WhatsApp
-        </a>
-
     </section>
 
+    <!-- PANIER -->
+    <div id="panier">
+        <h3>Panier 🛒</h3>
+        <div id="liste-panier">
+            <!-- Les articles ajoutés apparaîtront ici via JS -->
+        </div>
+        <p id="total-general"></p>
+        <button onclick="viderPanier()" class="btn danger">Vider le panier</button>
+        <button onclick="envoyerWhatsApp()" class="btn">Commander via WhatsApp</button>
+        <button onclick="fermerPanier()" class="btn">Fermer</button>
+    </div>
+
+    <!-- FOOTER -->
     <footer>
-        <p>Contact : +228 93 68 10 82</p>
-        <p>Contact : +33 7 58 34 48 75</p>
-        <p>© 2026 Boutique Élégance</p>
+        <div class="footer-container">
+            <p>&copy; 2026 Rynel'Shop. Tous droits réservés.</p>
+            <div class="footer-social">
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-tiktok"></i></a>
+                <a href="#"><i class="fab fa-snapchat"></i></a>
+                <a href="#"><i class="fab fa-whatsapp"></i></a>
+            </div>
+        </div>
     </footer>
 
+    <script src="script.js"></script>
 </body>
 
 </html>

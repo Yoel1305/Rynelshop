@@ -1,269 +1,383 @@
+/* ==========================
+   GENERAL
+========================== */
 body {
+    font-family: 'Poppins', sans-serif;
     margin: 0;
-    font-family: 'Georgia', serif;
-    background-color: #0c0c0c;
-    color: #f8f5f2;
+    padding: 0;
+    background: #fff8f5;
+    color: #333;
 }
 
-/* HERO SECTION */
-.hero {
-    height: 100vh;
-    background: url("images/hero.jpg") no-repeat center center/cover;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: relative;
-    text-align: center;
-}
-
-.overlay {
-    background: rgba(60, 0, 20, 0.65);
-    padding: 60px;
-    border-radius: 15px;
-}
-
-.hero h1 {
-    font-size: 55px;
-    letter-spacing: 3px;
+h1,
+h2,
+h3 {
+    font-weight: 600;
     margin-bottom: 15px;
-    color: gold;
+    color: #4a2f3e;
+    /* couleur élégante sombre */
 }
 
-.hero p {
-    font-size: 20px;
-    color: #f1d4af;
-    margin-bottom: 25px;
-}
-
-/* BUTTON */
-.btn {
-    display: inline-block;
-    padding: 12px 28px;
-    background: gold;
-    color: black;
+a {
     text-decoration: none;
-    font-weight: bold;
-    border-radius: 30px;
-    transition: 0.3s;
+    color: inherit;
 }
 
-.btn:hover {
-    background: #800020;
-    color: white;
-}
-
-/* PRODUITS */
-#produits {
-    padding: 80px 20px;
-    text-align: center;
-}
-
-#produits h2 {
-    color: gold;
-    margin-bottom: 50px;
-    font-size: 30px;
-}
-
-.produit {
-    display: inline-block;
-    width: 280px;
-    margin: 20px;
-    padding: 20px;
-    background: #1a1a1a;
-    border-radius: 20px;
-    transition: 0.3s;
-}
-
-.produit:hover {
-    transform: translateY(-8px);
-    background: #2a0a1a;
-}
-
-.produit img {
-    width: 100%;
-    border-radius: 15px;
-}
-
-.produit h3 {
-    color: #f1d4af;
-}
-
-footer {
-    text-align: center;
-    padding: 30px;
-    border-top: 1px solid gold;
-    color: #aaa;
-}
-
-/* NAVIGATION */
+/* ==========================
+   NAVIGATION
+========================== */
 nav {
-    position: fixed;
+    background-color: #fff;
+    /* fond blanc sobre */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    padding: 10px 30px;
+    position: sticky;
     top: 0;
-    width: 100%;
-    background: rgba(0, 0, 0, 0.9);
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 15px 20px;
-    /* réduit l'espace */
-    z-index: 1000;
-    box-sizing: border-box;
-}
-
-.logo {
-    color: gold;
-    font-size: 22px;
-    font-weight: bold;
+    z-index: 100;
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
 }
 
 nav ul {
     list-style: none;
     display: flex;
-    gap: 15px;
-    /* réduit l'espace entre les liens */
+    justify-content: center;
     margin: 0;
     padding: 0;
 }
 
+nav ul li {
+    margin: 0 20px;
+}
+
 nav ul li a {
     text-decoration: none;
-    color: #f1d4af;
-    transition: 0.3s;
+    color: #333;
+    font-weight: 600;
+    padding: 8px 15px;
+    border-radius: 8px;
+    transition: background 0.3s, color 0.3s;
 }
 
 nav ul li a:hover {
-    color: gold;
+    background-color: #f5f0f0;
+    color: #c2185b;
 }
 
-/* ESPACE POUR LA NAV FIXE */
-body {
-    padding-top: 80px;
+nav ul li a.active {
+    background-color: #c2185b;
+    color: #fff;
 }
 
-/* SECTION A PROPOS */
-#apropos {
-    padding: 80px 20px;
+/* ==========================
+   HERO
+========================== */
+.hero {
+    height: 400px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     text-align: center;
-    background: #140510;
+    color: #fff;
+    background: url('images/hero.jpg') center/cover no-repeat;
 }
 
-#apropos h2 {
-    color: gold;
-    margin-bottom: 30px;
+.hero h1 {
+    font-size: 3rem;
+    margin-bottom: 10px;
 }
 
-#apropos p {
-    max-width: 700px;
+.hero p {
+    font-size: 1.5rem;
+}
+
+/* ==========================
+   SECTIONS
+========================== */
+section {
+    padding: 50px 20px;
+    max-width: 1200px;
     margin: auto;
-    margin-bottom: 20px;
-    color: #f1d4af;
+}
+
+#about,
+#contact {
+    background-color: #fff;
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+    margin-bottom: 40px;
+    padding: 30px;
+}
+
+#about p,
+#contact p {
+    font-size: 16px;
     line-height: 1.6;
 }
 
-#contact {
-    padding: 100px 20px;
-    text-align: center;
-    background: #12040c;
-}
-
-#contact h2 {
-    color: gold;
-    margin-bottom: 40px;
-}
-
-/* .contact-container {
+/* ==========================
+   COLLECTIONS
+========================== */
+.collections {
     display: flex;
-    flex-direction: column;
+    justify-content: center;
     gap: 20px;
-    max-width: 500px;
-    margin: auto;
-    margin-bottom: 40px;
-} */
-.contact-container {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 30px;
-    max-width: 1000px;
-    margin: auto;
-    margin-bottom: 50px;
-    text-align: left;
+    flex-wrap: wrap;
 }
 
-.contact-container p {
-    color: #f1d4af;
-    font-size: 18px;
+.collection-card {
+    position: relative;
+    display: block;
+    border-radius: 15px;
+    overflow: hidden;
+    width: 250px;
+    text-align: center;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
 }
 
-.contact-container a {
-    color: gold;
-    text-decoration: none;
+.collection-card img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
 }
 
-.contact-container a:hover {
-    color: #ffffff;
+.collection-card .collection-overlay {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    background: rgba(194, 24, 91, 0.8);
+    color: #fff;
+    padding: 10px 0;
+    font-weight: bold;
+    font-size: 1.2rem;
 }
 
-#contact h2 {
-    color: gold;
-    margin-bottom: 30px;
+.collection-card:hover {
+    transform: translateY(-5px);
 }
 
-#contact p {
-    color: #f1d4af;
+/* ==========================
+   PRODUITS
+========================== */
+.products-container {
+    display: flex;
+    gap: 20px;
+    padding: 20px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.product {
+    background: #fff;
+    padding: 15px;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    width: 220px;
+}
+
+.product img {
+    width: 100%;
+    border-radius: 10px;
     margin-bottom: 10px;
 }
 
-.contact-container p {
-    background: #1a0a14;
-    padding: 20px;
-    border-radius: 15px;
-    color: #f1d4af;
-    transition: 0.3s;
+.quantity {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 10px 0;
 }
 
-.contact-container p:hover {
-    background: #2a0f20;
-    transform: translateY(-5px);
+.quantity button {
+    width: 30px;
+    height: 30px;
+    border: none;
+    background-color: #c2185b;
+    color: white;
+    border-radius: 50%;
+    cursor: pointer;
+    font-size: 18px;
+}
+
+.quantity span {
+    margin: 0 10px;
+    font-weight: bold;
+    font-size: 16px;
+}
+
+.add-to-cart {
+    background-color: #c2185b;
+    color: white;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+/* ==========================
+   CONTACT
+========================== */
+.contact-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
 }
 
 .contact-item {
-    background: #1a0a14;
-    padding: 25px;
-    border-radius: 15px;
-    transition: 0.3s;
+    background-color: #fff0f5;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+    width: 180px;
     text-align: center;
+    font-weight: 500;
 }
 
-.contact-item:hover {
-    background: #2a0f20;
-    transform: translateY(-5px);
+/* ==========================
+   PANIER
+========================== */
+/* ==========================
+   PANIER CLASSE ET ÉLÉGANT
+========================== */
+#panier {
+    position: fixed;
+    top: 50%;
+    right: -450px;
+    /* caché à droite au départ */
+    transform: translateY(-50%);
+    width: 400px;
+    max-height: 80%;
+    background: #fff;
+    border-radius: 20px 0 0 20px;
+    box-shadow: -8px 8px 30px rgba(0, 0, 0, 0.25);
+    padding: 25px 20px;
+    overflow-y: auto;
+    transition: right 0.4s ease, opacity 0.4s ease;
+    opacity: 0.95;
+    z-index: 2000;
+    font-family: 'Poppins', sans-serif;
 }
 
-.contact-item h3 {
-    color: gold;
-    margin-bottom: 10px;
+/* Panier visible */
+#panier.active {
+    right: 0;
+}
+
+/* Titre du panier */
+#panier h3 {
+    text-align: center;
+    margin-bottom: 25px;
+    font-size: 1.8rem;
+    color: #c2185b;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+/* Ligne produit */
+.ligne-panier {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px 0;
+    border-bottom: 1px solid #eee;
+    font-size: 15px;
+    transition: background 0.3s;
+}
+
+.ligne-panier:hover {
+    background-color: #fff0f5;
+    /* survol élégant */
+    border-radius: 10px;
+}
+
+/* Nom du produit */
+.ligne-panier span:first-child {
+    font-weight: 600;
+    max-width: 130px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+/* Quantité et prix */
+.ligne-panier span:nth-child(2),
+.ligne-panier span:nth-child(3) {
+    font-weight: 500;
+    color: #555;
+}
+
+/* Bouton supprimer */
+.ligne-panier button {
+    background: transparent;
+    border: none;
+    color: #c2185b;
     font-size: 18px;
+    cursor: pointer;
+    transition: color 0.2s;
 }
 
-.contact-item p,
-.contact-item a {
-    color: #f1d4af;
-    text-decoration: none;
+.ligne-panier button:hover {
+    color: #f44336;
+}
+
+/* Total général */
+#total-general {
+    margin-top: 20px;
+    font-weight: 700;
     font-size: 16px;
+    text-align: right;
+    padding-top: 10px;
+    border-top: 2px solid #eee;
+    color: #4a2f3e;
+}
+
+/* Réduction et livraison */
+#total-general .reduction {
+    color: #2e7d32;
+    /* vert élégant pour réduction */
+    font-weight: 600;
+}
+
+#total-general .gratuit {
+    color: #c2185b;
+    font-weight: 600;
+}
+
+/* Boutons du panier */
+.btn {
     display: block;
+    width: 100%;
+    margin-top: 12px;
+    padding: 12px 0;
+    border: none;
+    cursor: pointer;
+    font-weight: 600;
+    border-radius: 12px;
+    font-size: 16px;
+    transition: background 0.3s, transform 0.2s;
 }
 
-.contact-item a:hover {
-    color: white;
+.btn.danger {
+    background-color: #f44336;
+    color: #fff;
 }
 
-
-html {
-    scroll-behavior: smooth;
+.btn.danger:hover {
+    background-color: #d32f2f;
+    transform: translateY(-2px);
 }
 
-@media (max-width: 768px) {
-    .contact-container {
-        grid-template-columns: 1fr;
-    }
+.btn:not(.danger) {
+    background-color: #c2185b;
+    color: #fff;
+}
+
+.btn:not(.danger):hover {
+    background-color: #ad1457;
+    transform: translateY(-2px);
 }

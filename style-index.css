@@ -1,0 +1,417 @@
+/* ===============================
+   style-index.css – version chic & luxueuse
+   =============================== */
+
+/* --------- FONTS --------- */
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Raleway:wght@300;400;600&display=swap');
+
+/* --------- VARIABLES COULEURS --------- */
+:root {
+    --rose-clair: #fce8f0;
+    --rose-doré: #f5c6c8;
+    --or-luxe: #d4af37;
+    --blanc-cassé: #fdfcfb;
+    --gris-foncé: #333;
+    --gris-clair: #aaa;
+    --transition: 0.3s ease-in-out;
+}
+
+/* --------- RESET --------- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Raleway', sans-serif;
+}
+
+body {
+    background-color: var(--blanc-cassé);
+    color: var(--gris-foncé);
+    line-height: 1.6;
+}
+
+/* ===============================
+   NAVIGATION
+   =============================== */
+nav {
+    background-color: var(--blanc-cassé);
+    padding: 20px 50px;
+    display: flex;
+    justify-content: center;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 35px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: var(--gris-foncé);
+    font-weight: 600;
+    position: relative;
+    padding: 5px 0;
+    transition: var(--transition);
+}
+
+nav ul li a i {
+    margin-right: 6px;
+    color: var(--or-luxe);
+}
+
+nav ul li a::after {
+    content: '';
+    position: absolute;
+    width: 0%;
+    height: 2px;
+    bottom: -3px;
+    left: 0;
+    background-color: var(--or-luxe);
+    transition: var(--transition);
+}
+
+nav ul li a:hover::after {
+    width: 100%;
+}
+
+nav ul li a:hover {
+    color: var(--or-luxe);
+}
+
+/* ===============================
+   HERO
+   =============================== */
+.hero {
+    height: 80vh;
+    background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url('images/hero.jpg') center/cover no-repeat;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: var(--blanc-cassé);
+    padding: 0 20px;
+}
+
+.hero h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 4rem;
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);
+    letter-spacing: 2px;
+    animation: fadeInDown 1.2s ease forwards;
+}
+
+.hero p {
+    font-size: 1.5rem;
+    font-weight: 300;
+    text-shadow: 1px 1px 8px rgba(0, 0, 0, 0.4);
+    animation: fadeInUp 1.4s ease forwards;
+}
+
+/* Animations */
+@keyframes fadeInDown {
+    0% {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* ===============================
+   SECTIONS
+   =============================== */
+section {
+    padding: 80px 50px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 2.8rem;
+    margin-bottom: 50px;
+    color: var(--gris-foncé);
+    text-align: center;
+    position: relative;
+}
+
+h2::after {
+    content: '';
+    width: 60px;
+    height: 3px;
+    background-color: var(--or-luxe);
+    display: block;
+    margin: 15px auto 0;
+    border-radius: 2px;
+}
+
+/* ===============================
+   À PROPOS
+   =============================== */
+.about-card {
+    background-color: var(--rose-clair);
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 50px 40px;
+    border-radius: 25px;
+    box-shadow: 0 12px 35px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    font-size: 1.3rem;
+    font-weight: 400;
+    line-height: 1.8;
+    transition: transform var(--transition), box-shadow var(--transition);
+}
+
+.about-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 18px 45px rgba(0, 0, 0, 0.15);
+}
+
+/* ===============================
+   COLLECTIONS
+   =============================== */
+.collections {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+
+.collection-card {
+    position: relative;
+    overflow: hidden;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: transform var(--transition), box-shadow var(--transition);
+}
+
+.collection-card img {
+    display: block;
+    width: 320px;
+    height: 420px;
+    object-fit: cover;
+    transition: transform var(--transition), filter var(--transition);
+}
+
+.collection-card:hover img {
+    transform: scale(1.1);
+    filter: brightness(1.1);
+}
+
+.collection-overlay {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+    background: rgba(255, 255, 255, 0.6);
+    color: var(--gris-foncé);
+    font-family: 'Playfair Display', serif;
+    font-size: 1.6rem;
+    padding: 20px 0;
+    transition: background var(--transition), color var(--transition);
+    letter-spacing: 1px;
+}
+
+.collection-card:hover .collection-overlay {
+    background: rgba(212, 175, 55, 0.85);
+    color: var(--blanc-cassé);
+}
+
+/* ===============================
+   CONTACT
+   =============================== */
+.contact-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 40px;
+}
+
+.contact-item {
+    background-color: var(--rose-clair);
+    padding: 30px 25px;
+    border-radius: 25px;
+    text-align: center;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.12);
+    transition: transform var(--transition), box-shadow var(--transition);
+    width: 220px;
+    position: relative;
+}
+
+.contact-item:hover {
+    transform: translateY(-7px);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.18);
+}
+
+.contact-item p {
+    margin-top: 8px;
+    font-size: 1rem;
+    color: var(--gris-foncé);
+}
+
+.contact-icon {
+    font-size: 2.2rem;
+    color: var(--or-luxe);
+    margin-bottom: 12px;
+    transition: color var(--transition), transform var(--transition);
+}
+
+.contact-item:hover .contact-icon {
+    color: var(--rose-doré);
+    transform: scale(1.2);
+}
+
+/* ===============================
+   PANIER
+   =============================== */
+#panier {
+    position: fixed;
+    top: 0;
+    right: -400px;
+    /* cache le panier à droite */
+    width: 350px;
+    height: 100%;
+    background: #fff;
+    box-shadow: -4px 0 20px rgba(0, 0, 0, 0.2);
+    padding: 20px;
+    overflow-y: auto;
+    transition: right 0.3s ease;
+    z-index: 1000;
+    font-family: 'Poppins', sans-serif;
+}
+
+#panier.active {
+    right: 0;
+    /* fait glisser le panier visible */
+}
+
+#panier h3 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #c2185b;
+    /* couleur chic, féminine */
+}
+
+.ligne-panier {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 8px 0;
+    border-bottom: 1px solid #eee;
+    font-size: 14px;
+}
+
+.ligne-panier button {
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    color: #c2185b;
+    font-size: 16px;
+}
+
+#total-general {
+    margin-top: 15px;
+    font-weight: bold;
+    font-size: 16px;
+    text-align: right;
+}
+
+.btn {
+    display: block;
+    width: 100%;
+    margin-top: 10px;
+    padding: 10px 0;
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+    border-radius: 8px;
+}
+
+.btn.danger {
+    background-color: #f44336;
+    color: #fff;
+}
+
+.btn:not(.danger) {
+    background-color: #c2185b;
+    color: #fff;
+}
+
+.btn {
+    background-color: var(--or-luxe);
+    color: var(--blanc-cassé);
+    border: none;
+    padding: 14px 25px;
+    border-radius: 12px;
+    cursor: pointer;
+    font-weight: 600;
+    margin-top: 12px;
+    transition: background var(--transition), transform var(--transition);
+    width: 100%;
+}
+
+.btn:hover {
+    background-color: var(--gris-foncé);
+    transform: translateY(-2px);
+}
+
+.btn.danger {
+    background-color: #e74c3c;
+}
+
+.btn.danger:hover {
+    background-color: #c0392b;
+}
+
+/* ===============================
+   FOOTER
+   =============================== */
+footer {
+    background-color: var(--gris-foncé);
+    color: var(--blanc-cassé);
+    padding: 50px 20px;
+    text-align: center;
+}
+
+.footer-container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.footer-social {
+    margin-top: 20px;
+}
+
+.footer-social a {
+    color: var(--or-luxe);
+    margin: 0 12px;
+    font-size: 1.6rem;
+    transition: color var(--transition), transform var(--transition);
+}
+
+.footer-social a:hover {
+    color: var(--rose-doré);
+    transform: scale(1.2);
+}
