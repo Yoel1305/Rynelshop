@@ -278,7 +278,10 @@ section {
     right: -450px;
     /* caché à droite au départ */
     transform: translateY(-50%);
-    width: 400px;
+    /* width: 400px; */
+    width: 100%;
+    max-width: 400px;
+    /* garde ton style desktop */
     max-height: 80%;
     background: #fff;
     border-radius: 20px 0 0 20px;
@@ -294,6 +297,17 @@ section {
 /* Panier visible */
 #panier.active {
     right: 0;
+}
+
+#panier {
+    transform: translateY(-50%) scale(0.8);
+    opacity: 0;
+    transition: all 0.6s ease;
+}
+
+#panier.active {
+    transform: translateY(-50%) scale(1);
+    opacity: 1;
 }
 
 /* Titre du panier */
@@ -433,6 +447,8 @@ section {
     .products-container {
         grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
     }
+
+
 }
 
 @media screen and (max-width: 480px) {
@@ -450,7 +466,26 @@ section {
         font-size: 0.7rem;
         /* margin: 2px 2px; */
     }
+
 }
+
+@media (max-width: 480px) {
+    #panier {
+        width: 90%;
+        padding: 15px;
+        border-radius: 12px;
+    }
+
+    .ligne-panier {
+        font-size: 14px;
+    }
+
+    #panier h3 {
+        font-size: 18px;
+    }
+}
+
+
 
 /* ================= BULLES ANIMÉES ================= */
 
