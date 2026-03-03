@@ -381,3 +381,39 @@ section {
     background-color: #ad1457;
     transform: translateY(-2px);
 }
+
+/* ========== MEDIA QUERIES ========== */
+@media screen and (max-width: 768px) {
+    .hero h1 {
+        font-size: 2.2rem;
+    }
+
+    .hero p {
+        font-size: 1.1rem;
+    }
+
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .collections,
+    .products-container {
+        grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .hero {
+        height: 40vh;
+    }
+
+    .collections,
+    .products-container {
+        grid-template-columns: 1fr;
+    }
+
+    nav ul li {
+        margin: 5px 0;
+    }
+}
