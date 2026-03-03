@@ -176,7 +176,7 @@ function envoyerWhatsApp() {
   message += `*TOTAL : ${totalFinal} FCFA*%0A%0A`;
   message += "Merci 🙏";
 
-  const numero = "22893681082"; // ton numéro WhatsApp
+  const numero = "33758344875"; // ton numéro WhatsApp
   const url = `https://wa.me/${numero}?text=${message}`;
   window.open(url, "_blank");
 }
