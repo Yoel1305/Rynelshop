@@ -285,12 +285,12 @@ section {
     align-items: center;
     padding: 12px 0;
     border-bottom: 1px solid #eee;
-    font-size: 15px;
+    font-size: 12px;
     transition: background 0.3s;
 }
 
 .ligne-panier:hover {
-    background-color: #fff0f5;
+    background-color: #d3bfc6;
     /* survol élégant */
     border-radius: 10px;
 }
