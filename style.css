@@ -393,8 +393,11 @@ section {
     }
 
     nav ul {
-        flex-direction: column;
+        flex-direction: row;
         align-items: center;
+        font-size: 0.8rem;
+        margin: 2px 2px;
+        padding: 1px 0;
     }
 
     .collections,
@@ -414,6 +417,8 @@ section {
     }
 
     nav ul li {
-        margin: 5px 0;
+        margin: 2px 0;
+        font-size: 0.7rem;
+        /* margin: 2px 2px; */
     }
 }
