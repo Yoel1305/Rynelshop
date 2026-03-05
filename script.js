@@ -143,6 +143,11 @@ function initialiserQuantites() {
 // ENVOYER SUR WHATSAPP
 // ============================
 function envoyerWhatsApp() {
+  // 🔴 Vérifier si panier vide
+  if (Object.keys(panier).length === 0) {
+    alert("Votre panier est vide 🛒");
+    return; // on bloque ici
+  }
   let message = "🛍️ *COMMANDE RYNEL'SHOP* %0A%0A";
   let totalGeneral = 0;
 

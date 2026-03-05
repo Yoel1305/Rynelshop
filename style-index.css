@@ -280,11 +280,25 @@ h2::after {
 /* ===============================
    CONTACT
    =============================== */
+/* .contact-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 25px;
+}
+
 .contact-container {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     gap: 40px;
+} */
+
+.contact-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 25px;
+    max-width: 900px;
+    margin: auto;
 }
 
 .contact-item {
@@ -319,6 +333,11 @@ h2::after {
 .contact-item:hover .contact-icon {
     color: var(--rose-doré);
     transform: scale(1.2);
+}
+
+.contact-item:hover {
+    background: #faf7f2;
+    transform: translateY(-4px) scale(1.03);
 }
 
 /* ===============================
@@ -488,3 +507,6 @@ EFFET SIGNATURE
         border-color: transparent;
     }
 }
+
+
+/* Responsive section contact */
